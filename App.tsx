@@ -1,90 +1,59 @@
-/**
- * Sample React Native App
- * https://github.com/facebook/react-native
- *
- * @format
- */
-
 import React from 'react';
-import type {PropsWithChildren} from 'react';
-import {
-  SafeAreaView,
-  ScrollView,
-  StatusBar,
-  StyleSheet,
-  Text,
-  useColorScheme,
-  View,
-} from 'react-native';
+import {SafeAreaView, StatusBar, View} from 'react-native';
+import {NavigationContainer} from '@react-navigation/native';
+import {createNativeStackNavigator} from '@react-navigation/native-stack';
+import {Provider} from 'react-redux';
+import store from './store/store';
+import 'react-native-gesture-handler';
+import Start from './src/screens/Start';
+import SplashScreen from './src/screens/SplashScreen';
+import Register from './src/screens/Register';
+import RegisterBirthday from './src/screens/RegisterBirthday';
+import {SessionDataProvider} from './src/component/SessionContext';
+import RegisterPhone from './src/screens/RegisterPhone';
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen';
-import Task from './src/screens/Task';
+// Create a stack navigator
+const Stack = createNativeStackNavigator();
 
-type SectionProps = PropsWithChildren<{
-  title: string;
-}>;
-
-function Section({children, title}: SectionProps): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
+// Main App component
+export default function App() {
   return (
-    <View style={styles.sectionContainer}>
-      <Text
-        style={[
-          styles.sectionTitle,
-          {
-            color: isDarkMode ? Colors.white : Colors.black,
-          },
-        ]}>
-        {title}
-      </Text>
-      <Text
-        style={[
-          styles.sectionDescription,
-          {
-            color: isDarkMode ? Colors.light : Colors.dark,
-          },
-        ]}>
-        {children}
-      </Text>
+    // Provide Redux store to the app
+    <View style={{flex: 1}}>
+      <StatusBar translucent backgroundColor="transparent" />
+      <Provider store={store}>
+        <SessionDataProvider>
+          <NavigationContainer>
+            <Stack.Navigator initialRouteName="SplashScreen">
+              <Stack.Screen
+                name="SplashScreen"
+                component={SplashScreen}
+                options={{headerShown: false, statusBarHidden: true}}
+              />
+              <Stack.Screen
+                name="Start"
+                component={Start}
+                options={{headerShown: false}}
+              />
+              <Stack.Screen
+                name="Register"
+                component={Register}
+                options={{headerShown: false}}
+              />
+              <Stack.Screen
+                name="RegisterBirthday"
+                component={RegisterBirthday}
+                options={{headerShown: false}}
+              />
+              <Stack.Screen
+                name="RegisterPhone"
+                component={RegisterPhone}
+                options={{headerShown: false}}
+              />
+            </Stack.Navigator>
+          </NavigationContainer>
+        </SessionDataProvider>
+      </Provider>
     </View>
   );
 }
-
-function App(): React.JSX.Element {
-  const isDarkMode = useColorScheme() === 'dark';
-
-  const backgroundStyle = {
-    backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
-  };
-
-  return (
-    <Task/>
-  );
-}
-
-const styles = StyleSheet.create({
-  sectionContainer: {
-    marginTop: 32,
-    paddingHorizontal: 24,
-  },
-  sectionTitle: {
-    fontSize: 24,
-    fontWeight: '600',
-  },
-  sectionDescription: {
-    marginTop: 8,
-    fontSize: 18,
-    fontWeight: '400',
-  },
-  highlight: {
-    fontWeight: '700',
-  },
-});
-
-export default App;

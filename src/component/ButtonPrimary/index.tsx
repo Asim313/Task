@@ -31,7 +31,7 @@ const ButtonPrimary: FC<Props> = ({title, cardButton = false, task}) => {
         <Text
           style={
             cardButton
-              ? {...styles.buttonText, ...{fontSize: mvs(12)}}
+              ? {...styles.buttonText, ...{fontSize: mvs(12), lineHeight: mvs(18)}}
               : {...styles.buttonText, ...(claim && styles.claimed)}
           }
         >

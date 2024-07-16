@@ -12,11 +12,11 @@ import styles from './styles';
 import TaskBackground from '../../../assets/SVG/taskBackgroung';
 import Back from '../../../assets/SVG/back';
 import {mvs} from '../../utils/metrices';
-import Heading from '../../components/Title';
-import DailyReward from '../../components/DailyReward';
-import ButtonPrimary from '../../components/ButtonPrimary';
-import Card from '../../components/Card';
-import Description from '../../components/Description';
+import Heading from '../../component/Title';
+import DailyReward from '../../component/DailyReward';
+import ButtonPrimary from '../../component/ButtonPrimary';
+import Card from '../../component/Card';
+import Description from '../../component/Description';
 
 interface TaskProps {
   navigation: any;
