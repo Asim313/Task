@@ -18,6 +18,8 @@
 		C45D7BCB2C44873D004FCD57 /* Poppins-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C45D7BC72C44873C004FCD57 /* Poppins-Regular.ttf */; };
 		C45D7BCC2C44873D004FCD57 /* Poppins-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C45D7BC82C44873C004FCD57 /* Poppins-Medium.ttf */; };
 		C45D7BCD2C44873D004FCD57 /* Poppins-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C45D7BC92C44873D004FCD57 /* Poppins-Bold.ttf */; };
+		C4E4C4F92C4ED40C0058F546 /* Poppins-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4E4C4F72C4ED40C0058F546 /* Poppins-Light.ttf */; };
+		C4E4C4FA2C4ED40C0058F546 /* Poppins-ExtraLight.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C4E4C4F82C4ED40C0058F546 /* Poppins-ExtraLight.ttf */; };
 		D429253CBAD5008B9534B155 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = E5C7AD475ADBFDB461319F52 /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		C45D7BC72C44873C004FCD57 /* Poppins-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Regular.ttf"; sourceTree = "<group>"; };
 		C45D7BC82C44873C004FCD57 /* Poppins-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Medium.ttf"; sourceTree = "<group>"; };
 		C45D7BC92C44873D004FCD57 /* Poppins-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Poppins-Bold.ttf"; sourceTree = "<group>"; };
+		C4E4C4F72C4ED40C0058F546 /* Poppins-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-Light.ttf"; path = "../../android/app/src/main/assets/fonts/Poppins-Light.ttf"; sourceTree = "<group>"; };
+		C4E4C4F82C4ED40C0058F546 /* Poppins-ExtraLight.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; name = "Poppins-ExtraLight.ttf"; path = "../../android/app/src/main/assets/fonts/Poppins-ExtraLight.ttf"; sourceTree = "<group>"; };
 		E5C7AD475ADBFDB461319F52 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = Task/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
@@ -165,6 +169,8 @@
 		C45D7BC52C448707004FCD57 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				C4E4C4F82C4ED40C0058F546 /* Poppins-ExtraLight.ttf */,
+				C4E4C4F72C4ED40C0058F546 /* Poppins-Light.ttf */,
 				C45D7BC92C44873D004FCD57 /* Poppins-Bold.ttf */,
 				C45D7BC82C44873C004FCD57 /* Poppins-Medium.ttf */,
 				C45D7BC72C44873C004FCD57 /* Poppins-Regular.ttf */,
@@ -269,6 +275,8 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				C45D7BCA2C44873D004FCD57 /* Poppins-SemiBold.ttf in Resources */,
 				C45D7BCD2C44873D004FCD57 /* Poppins-Bold.ttf in Resources */,
+				C4E4C4FA2C4ED40C0058F546 /* Poppins-ExtraLight.ttf in Resources */,
+				C4E4C4F92C4ED40C0058F546 /* Poppins-Light.ttf in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				C45D7BCC2C44873D004FCD57 /* Poppins-Medium.ttf in Resources */,
 				D429253CBAD5008B9534B155 /* PrivacyInfo.xcprivacy in Resources */,
@@ -616,10 +624,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -691,10 +696,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

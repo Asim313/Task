@@ -6,7 +6,7 @@
 // const [shortDimension, longDimension] = width < height ? [width, height] : [height, width];
 
 // //Default guideline sizes are based on standard ~5" screen mobile device
-// const guidelineBaseWidth = 400;//360//411
+// const guidelineBaseWidth = 375;//360//411
 // const guidelineBaseHeight = 812;//686//683
 // console.log(shortDimension,longDimension)
 //  const scale = size => shortDimension / guidelineBaseWidth * size;
@@ -26,11 +26,11 @@ const xdHeight = (xdHeight: number) => {
   return PixelRatio.roundToNearestPixel((height * heightPercent) / 100);
 };
 const xdWith = (xdWidth: number) => {
-  const widthPercent = Math.round((xdWidth / 400) * 100);
+  const widthPercent = Math.round((xdWidth / 375) * 100);
   return PixelRatio.roundToNearestPixel((width * widthPercent) / 100);
 };
 //Guideline sizes are based on standard ~5" screen mobile device
-const guidelineBaseWidth = 400;
+const guidelineBaseWidth = 375;
 const guidelineBaseHeight = 812;
 
 const scale = (size: number) => (width / guidelineBaseWidth) * size;
