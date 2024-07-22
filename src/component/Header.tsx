@@ -52,7 +52,7 @@ const styles = StyleSheet.create({
     // flex: 1,
     width: '100%',
     alignItems: 'center',
-    marginTop: Platform.OS == 'android'? mvs(16) : mvs(60),
+    marginTop: Platform.OS == 'android'? mvs(50) : mvs(60),
     //paddingVertical: mvs(10),
   },
   mainContainer: {

@@ -6,6 +6,7 @@ import {
   TouchableOpacity,
   View,
   Alert,
+  Platform,
 } from 'react-native';
 import {
   CodeField,
@@ -113,7 +114,11 @@ const RegisterBirthday = ({navigation}) => {
       style={styles.loginscreen}>
       <Header progress={36} more onBack={() => navigation.goBack()} />
 
-      <View style={{...styles.headerContainer, height: mvs(120)}}>
+      <View
+        style={{
+          ...styles.headerContainer,
+          height: Platform.OS == 'ios' ? mvs(100) : mvs(120),
+        }}>
         <Text style={[styles.textLeftAlign, {marginLeft: 8}]}>
           {t.birthdayHeader}
         </Text>

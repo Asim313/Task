@@ -11,6 +11,7 @@ import Register from './src/screens/Register';
 import RegisterBirthday from './src/screens/RegisterBirthday';
 import {SessionDataProvider} from './src/component/SessionContext';
 import RegisterPhone from './src/screens/RegisterPhone';
+import Task from './src/screens/Task';
 
 // Create a stack navigator
 const Stack = createNativeStackNavigator();
@@ -20,11 +21,16 @@ export default function App() {
   return (
     // Provide Redux store to the app
     <View style={{flex: 1}}>
-      <StatusBar translucent backgroundColor="transparent" />
       <Provider store={store}>
+      <StatusBar hidden />
         <SessionDataProvider>
           <NavigationContainer>
-            <Stack.Navigator initialRouteName="SplashScreen">
+            <Stack.Navigator initialRouteName="Task">
+            <Stack.Screen
+                name="Task"
+                component={Task}
+                options={{headerShown: false, statusBarHidden: true}}
+              />
               <Stack.Screen
                 name="SplashScreen"
                 component={SplashScreen}
