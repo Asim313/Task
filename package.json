@@ -9,7 +9,8 @@
     "start": "react-native start",
     "test": "jest",
     "pre-debug-apk": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res",
-    "debug-apk": "cd android && ./gradlew assembleDebug"
+    "debug-apk": "cd android && ./gradlew assembleDebug",
+    "release-apk": "cd android && ./gradlew assembleRelease"
   },
   "dependencies": {
     "@gorhom/bottom-sheet": "^4",
