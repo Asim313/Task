@@ -2868,6 +2868,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/react-native-background-timer@npm:^2.0.2":
+  version: 2.0.2
+  resolution: "@types/react-native-background-timer@npm:2.0.2"
+  checksum: b463cc1c33d50af5cc3b81a98f10315188b044f6de8e13733da9bfe0b16018ab5e8b680aae6305cff06c4cffb66f89b59782499fc1e90d42591c8324319afaa7
+  languageName: node
+  linkType: hard
+
 "@types/react-test-renderer@npm:^18.0.0":
   version: 18.3.0
   resolution: "@types/react-test-renderer@npm:18.3.0"
@@ -3129,6 +3136,7 @@ __metadata:
     "@react-navigation/native": ^6.1.17
     "@react-navigation/native-stack": ^6.10.0
     "@types/react": ^18.2.6
+    "@types/react-native-background-timer": ^2.0.2
     "@types/react-test-renderer": ^18.0.0
     babel-jest: ^29.6.3
     eslint: ^8.19.0
@@ -3136,12 +3144,16 @@ __metadata:
     prettier: 2.8.8
     react: 18.2.0
     react-native: 0.74.3
+    react-native-background-fetch: ^4.2.5
+    react-native-background-timer: ^2.4.1
     react-native-gesture-handler: ^2.17.1
     react-native-keyboard-aware-scroll-view: ^0.9.5
     react-native-reanimated: ^3.14.0
+    react-native-ringer-mode: ^2.0.1
     react-native-safe-area-context: ^4.10.8
     react-native-screens: ^3.32.0
     react-native-svg: ^15.4.0
+    react-native-volume-manager: ^1.10.0
     react-test-renderer: 18.2.0
     typescript: 5.0.4
   languageName: unknown
@@ -8220,6 +8232,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-background-fetch@npm:^4.2.5":
+  version: 4.2.5
+  resolution: "react-native-background-fetch@npm:4.2.5"
+  checksum: d124418a69377f0399b72cb86bfea5e801a4dc2d5b8215e6736fd21836a82ad514a3b89fd2915b866c205e6e7f2feddd0486d4893a0261e7d978502773397d45
+  languageName: node
+  linkType: hard
+
+"react-native-background-timer@npm:^2.4.1":
+  version: 2.4.1
+  resolution: "react-native-background-timer@npm:2.4.1"
+  peerDependencies:
+    react-native: ">=0.47.0"
+  checksum: 635feb23bfdc8c43b8ee85dc85a5eb83f85aa9c285ce92ac329946ac83864121ae66bfb64fefa21e2a10462d094e03c17ff87eeb5d7e6349bc8e72d941f12754
+  languageName: node
+  linkType: hard
+
 "react-native-gesture-handler@npm:^2.17.1":
   version: 2.17.1
   resolution: "react-native-gesture-handler@npm:2.17.1"
@@ -8276,6 +8304,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-native-ringer-mode@npm:^2.0.1":
+  version: 2.0.1
+  resolution: "react-native-ringer-mode@npm:2.0.1"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: d196cb89b5b7db31220345ae2077ed9f65deec7b4ba8a0f531e2066da61e12074663a8b06303bbe89aeb2e961630a5ce1cfa9babfc1e0414d9e43b3d7b078584
+  languageName: node
+  linkType: hard
+
 "react-native-safe-area-context@npm:^4.10.8":
   version: 4.10.8
   resolution: "react-native-safe-area-context@npm:4.10.8"
@@ -8310,6 +8348,16 @@ __metadata:
     react: "*"
     react-native: "*"
   checksum: 04f5aafa88e5d641df998c195988904760984004ae3d5b16c3313941f2027d85b4d5f9c35ac9d696ee533ccff33f4f3c9b86249ca6fec787ca4895075ee4d9d0
+  languageName: node
+  linkType: hard
+
+"react-native-volume-manager@npm:^1.10.0":
+  version: 1.10.0
+  resolution: "react-native-volume-manager@npm:1.10.0"
+  peerDependencies:
+    react: "*"
+    react-native: "*"
+  checksum: cfa876f99500f5f5e8a71c8a4f09b45bfbb80e5708d92d0a5c87dcd6388b8c1d9cb3759382d287bfc4ece39d1a056a87b132a8c9d7aa24c80b5e0437e2994c78
   languageName: node
   linkType: hard
 
